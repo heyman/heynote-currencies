@@ -22,8 +22,7 @@ jobs:
     steps:
       - name: Fetch rates
         run: |
-          mkdir _site
-          curl --fail 'https://api.apilayer.com/fixer/latest?base=EUR' --header 'apikey: ${{ secrets.fixer_api_key }}' > ./_site/rates.json
+          mkdir _site && curl --fail 'https://api.apilayer.com/fixer/latest?base=EUR' --header 'apikey: ${{ secrets.fixer_api_key }}' > ./_site/rates.json
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
