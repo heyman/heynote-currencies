@@ -40,8 +40,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v1
 
-  keepalive:
-    name: Create dummy commit if needed to keep workflow running
+  keep-alive:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
